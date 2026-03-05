@@ -211,7 +211,7 @@ const App: React.FC = () => {
   );
 
   return (
-    <div className="h-screen flex flex-col bg-slate-950 text-white overflow-hidden font-sans">
+    <div className={`${imageState ? 'h-screen overflow-hidden' : 'min-h-screen overflow-x-hidden'} flex flex-col bg-slate-950 text-white font-sans`}>
       <input 
         type="file" 
         ref={uploadInputRef} 
@@ -221,33 +221,35 @@ const App: React.FC = () => {
       />
 
       {!imageState ? (
-        <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden bg-[#020617]">
-          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-dots"></div>
-          <div className="absolute top-1/4 -left-20 w-[40rem] h-[40rem] bg-cyan-600/10 blur-[180px] rounded-full"></div>
-          <div className="absolute bottom-1/4 -right-20 w-[40rem] h-[40rem] bg-emerald-600/10 blur-[180px] rounded-full"></div>
-          
-          <div className="text-center mb-12 relative z-10">
-              <div className="flex justify-center mb-6">
-                  <Logo size={84} className="hover:scale-110 transition-transform duration-500 cursor-pointer" />
-              </div>
-              <h1 className="text-7xl md:text-8xl tracking-tighter mb-6 select-none flex justify-center items-baseline">
-                  <span className="font-extrabold text-white">Neo</span>
-                  <span className="font-light text-slate-500">Img</span>
-              </h1>
-              <p className="text-slate-400 text-lg md:text-xl max-w-xl mx-auto leading-relaxed font-light tracking-tight px-4">
-                  <span className="text-white font-medium border-b border-cyan-500/30">极致、私密、现代</span> 的图像工作站。<br/>
-                  在浏览器本地安全地完成裁剪、缩放与压缩。
-              </p>
+        <div className="min-h-screen relative overflow-hidden bg-[#030712] flex flex-col items-center justify-center px-4 md:px-6 py-10 md:py-14">
+          <div className="absolute inset-0 bg-[radial-gradient(140%_100%_at_50%_0%,rgba(30,64,175,0.35)_0%,rgba(8,47,73,0.3)_35%,rgba(2,6,23,0.94)_70%)]"></div>
+          <div className="absolute -top-32 -left-24 h-[28rem] w-[28rem] rounded-full bg-cyan-500/20 blur-[120px]"></div>
+          <div className="absolute bottom-[-8rem] right-[-6rem] h-[30rem] w-[30rem] rounded-full bg-teal-400/20 blur-[140px]"></div>
+          <div className="absolute top-1/3 right-1/4 h-56 w-72 rounded-[55%_45%_60%_40%] bg-blue-300/10 blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-1/4 h-64 w-80 rounded-[40%_60%_50%_50%] bg-teal-300/10 blur-3xl"></div>
+
+          <div className="relative z-10 text-center mb-8 md:mb-10">
+            <div className="flex justify-center mb-4 md:mb-6">
+              <Logo size={84} className="hover:scale-110 transition-transform duration-500 cursor-pointer" />
+            </div>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl tracking-tight mb-4 select-none text-white font-semibold">NeoImg</h1>
+            <p className="text-white/75 text-sm sm:text-base md:text-lg max-w-3xl mx-auto tracking-wide leading-relaxed px-4">
+              高端图片工作台，灵感来自 Apple 的简洁设计语言。
+              <br className="hidden md:block" />
+              全程本地处理，安全私密，专业高效。
+            </p>
           </div>
-          
-          <div className="w-full max-w-3xl transform hover:translate-y-[-4px] transition-transform duration-500">
+
+          <div className="relative z-10 w-full flex justify-center">
             <DropZone onFileSelect={handleFileSelect} />
           </div>
 
-          <div className="mt-16 flex items-center space-x-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-             <div className="flex items-center space-x-2"><div className="w-2 h-2 rounded-full bg-green-500"></div><span className="text-[10px] font-bold tracking-widest uppercase">本地加密</span></div>
-             <div className="flex items-center space-x-2"><div className="w-2 h-2 rounded-full bg-blue-500"></div><span className="text-[10px] font-bold tracking-widest uppercase">AI 增强</span></div>
-             <div className="flex items-center space-x-2"><div className="w-2 h-2 rounded-full bg-cyan-500"></div><span className="text-[10px] font-bold tracking-widest uppercase">无损处理</span></div>
+          <div className="relative z-10 mt-8 md:mt-10 flex flex-wrap items-center justify-center gap-3 md:gap-6 text-white/55 text-[10px] uppercase tracking-[0.2em]">
+            <span>暗色玻璃质感</span>
+            <span className="text-white/20">•</span>
+            <span>流体渐变背景</span>
+            <span className="text-white/20">•</span>
+            <span>本地隐私处理</span>
           </div>
         </div>
       ) : (
