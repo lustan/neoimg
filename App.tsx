@@ -234,9 +234,9 @@ const App: React.FC = () => {
             </div>
             <h1 className="text-7xl md:text-8xl tracking-tight mb-5 select-none text-white font-semibold">NeoImg</h1>
             <p className="text-white/75 text-base md:text-lg max-w-3xl mx-auto tracking-wide leading-relaxed px-4">
-              High-end image workspace with a sleek Apple-inspired aesthetic.
+              高端图像工作台，采用灵感源自 Apple 的简洁美学设计。
               <br className="hidden md:block" />
-              Local-first editing in a premium dark glass environment.
+              本地优先编辑体验，尽在高质感暗色玻璃界面。
             </p>
           </div>
 
@@ -245,11 +245,11 @@ const App: React.FC = () => {
           </div>
 
           <div className="relative z-10 mt-12 flex items-center gap-6 md:gap-10 text-white/55 text-[10px] uppercase tracking-[0.24em]">
-            <span>Dark Glass UI</span>
+            <span>暗色玻璃界面</span>
             <span className="text-white/20">•</span>
-            <span>Fluid Gradient Backdrop</span>
+            <span>流动渐变背景</span>
             <span className="text-white/20">•</span>
-            <span>Private On Device</span>
+            <span>本地隐私处理</span>
           </div>
         </div>
       ) : (

@@ -77,14 +77,14 @@ const DropZone: React.FC<DropZoneProps> = ({ onFileSelect }) => {
           </svg>
         </div>
 
-        <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">Drop your image</h3>
-        <p className="mt-3 text-sm md:text-base text-white/75">Drag & drop or click to upload · Private on-device processing</p>
+        <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">拖放你的图片</h3>
+        <p className="mt-3 text-sm md:text-base text-white/75">拖拽上传或点击选择 · 全程本地隐私处理</p>
 
         <button
           type="button"
           className="mt-8 rounded-full border border-white/30 bg-white/10 px-7 py-3 text-xs uppercase tracking-[0.28em] font-semibold text-white transition-all hover:bg-white/20"
         >
-          Choose file
+          选择文件
         </button>
       </div>
     </div>
