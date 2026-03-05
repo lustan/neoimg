@@ -47,8 +47,8 @@ const DropZone: React.FC<DropZoneProps> = ({ onFileSelect }) => {
   return (
     <div
       className={`
-        relative w-full max-w-3xl min-h-[18rem] md:min-h-[22rem] rounded-[2rem] md:rounded-[2.5rem] border transition-all duration-500 cursor-pointer overflow-hidden
-        flex flex-col items-center justify-center px-6 md:px-8 py-8 md:py-12 backdrop-blur-3xl
+        relative w-full max-w-3xl min-h-[24rem] rounded-[2.5rem] border transition-all duration-500 cursor-pointer overflow-hidden
+        flex flex-col items-center justify-center px-8 py-12 backdrop-blur-3xl
         ${isDragging
           ? 'border-cyan-300/70 bg-white/15 shadow-[0_0_120px_rgba(45,212,191,0.22)] scale-[1.015]'
           : 'border-white/25 bg-white/[0.08] shadow-[0_20px_90px_rgba(8,47,73,0.45)] hover:border-cyan-200/50 hover:bg-white/[0.1] hover:-translate-y-1'}
@@ -66,25 +66,25 @@ const DropZone: React.FC<DropZoneProps> = ({ onFileSelect }) => {
         accept="image/png, image/jpeg, image/webp, image/svg+xml, image/gif"
       />
 
-      <div className="pointer-events-none absolute inset-0 rounded-[2rem] md:rounded-[2.5rem] border border-white/20"></div>
+      <div className="pointer-events-none absolute inset-0 rounded-[2.5rem] border border-white/20"></div>
       <div className="pointer-events-none absolute -inset-1 rounded-[2.8rem] bg-gradient-to-r from-cyan-300/20 via-white/5 to-teal-300/20 blur-xl"></div>
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.2),transparent_36%),radial-gradient(circle_at_80%_75%,rgba(45,212,191,0.16),transparent_40%)]"></div>
 
       <div className="relative z-10 flex flex-col items-center text-center">
-        <div className="mb-5 md:mb-8 flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-3xl border border-white/30 bg-white/10 shadow-[0_0_60px_rgba(34,211,238,0.35)]">
+        <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-3xl border border-white/30 bg-white/10 shadow-[0_0_60px_rgba(34,211,238,0.35)]">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.4} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
         </div>
 
-        <h3 className="text-2xl md:text-4xl font-semibold tracking-tight text-white">拖拽上传图片</h3>
-        <p className="mt-2 md:mt-3 text-xs sm:text-sm md:text-base text-white/75">支持拖拽或点击上传 · 全程本地处理，隐私无忧</p>
+        <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">Drop your image</h3>
+        <p className="mt-3 text-sm md:text-base text-white/75">Drag & drop or click to upload · Private on-device processing</p>
 
         <button
           type="button"
-          className="mt-6 md:mt-8 rounded-full border border-white/30 bg-white/10 px-6 md:px-7 py-2.5 md:py-3 text-[11px] uppercase tracking-[0.2em] font-semibold text-white transition-all hover:bg-white/20"
+          className="mt-8 rounded-full border border-white/30 bg-white/10 px-7 py-3 text-xs uppercase tracking-[0.28em] font-semibold text-white transition-all hover:bg-white/20"
         >
-          选择图片
+          Choose file
         </button>
       </div>
     </div>

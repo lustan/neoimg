@@ -221,22 +221,22 @@ const App: React.FC = () => {
       />
 
       {!imageState ? (
-        <div className="min-h-screen relative overflow-hidden bg-[#030712] flex flex-col items-center justify-center px-4 md:px-6 py-10 md:py-14">
+        <div className="min-h-screen relative overflow-hidden bg-[#030712] flex flex-col items-center justify-center px-6 py-16">
           <div className="absolute inset-0 bg-[radial-gradient(140%_100%_at_50%_0%,rgba(30,64,175,0.35)_0%,rgba(8,47,73,0.3)_35%,rgba(2,6,23,0.94)_70%)]"></div>
           <div className="absolute -top-32 -left-24 h-[28rem] w-[28rem] rounded-full bg-cyan-500/20 blur-[120px]"></div>
           <div className="absolute bottom-[-8rem] right-[-6rem] h-[30rem] w-[30rem] rounded-full bg-teal-400/20 blur-[140px]"></div>
           <div className="absolute top-1/3 right-1/4 h-56 w-72 rounded-[55%_45%_60%_40%] bg-blue-300/10 blur-3xl"></div>
           <div className="absolute bottom-1/4 left-1/4 h-64 w-80 rounded-[40%_60%_50%_50%] bg-teal-300/10 blur-3xl"></div>
 
-          <div className="relative z-10 text-center mb-8 md:mb-10">
-            <div className="flex justify-center mb-4 md:mb-6">
+          <div className="relative z-10 text-center mb-12">
+            <div className="flex justify-center mb-6">
               <Logo size={84} className="hover:scale-110 transition-transform duration-500 cursor-pointer" />
             </div>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl tracking-tight mb-4 select-none text-white font-semibold">NeoImg</h1>
-            <p className="text-white/75 text-sm sm:text-base md:text-lg max-w-3xl mx-auto tracking-wide leading-relaxed px-4">
-              高端图片工作台，灵感来自 Apple 的简洁设计语言。
+            <h1 className="text-7xl md:text-8xl tracking-tight mb-5 select-none text-white font-semibold">NeoImg</h1>
+            <p className="text-white/75 text-base md:text-lg max-w-3xl mx-auto tracking-wide leading-relaxed px-4">
+              High-end image workspace with a sleek Apple-inspired aesthetic.
               <br className="hidden md:block" />
-              全程本地处理，安全私密，专业高效。
+              Local-first editing in a premium dark glass environment.
             </p>
           </div>
 
@@ -244,12 +244,12 @@ const App: React.FC = () => {
             <DropZone onFileSelect={handleFileSelect} />
           </div>
 
-          <div className="relative z-10 mt-8 md:mt-10 flex flex-wrap items-center justify-center gap-3 md:gap-6 text-white/55 text-[10px] uppercase tracking-[0.2em]">
-            <span>暗色玻璃质感</span>
+          <div className="relative z-10 mt-12 flex items-center gap-6 md:gap-10 text-white/55 text-[10px] uppercase tracking-[0.24em]">
+            <span>Dark Glass UI</span>
             <span className="text-white/20">•</span>
-            <span>流体渐变背景</span>
+            <span>Fluid Gradient Backdrop</span>
             <span className="text-white/20">•</span>
-            <span>本地隐私处理</span>
+            <span>Private On Device</span>
           </div>
         </div>
       ) : (
