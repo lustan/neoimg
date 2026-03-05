@@ -211,7 +211,7 @@ const App: React.FC = () => {
   );
 
   return (
-    <div className="h-screen flex flex-col bg-slate-950 text-white overflow-hidden font-sans">
+    <div className={`${imageState ? 'h-screen overflow-hidden' : 'min-h-screen overflow-x-hidden'} flex flex-col bg-slate-950 text-white font-sans`}>
       <input 
         type="file" 
         ref={uploadInputRef} 
