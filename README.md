@@ -1,4 +1,4 @@
-# 📸 NeoImg (img.bytexel.com)
+# 📸 NeoImg ([https://img.bytexel.com](https://img.bytexel.com))
 
 NeoImg 是一款基于浏览器的专业级图像处理工具，旨在提供极简的操作体验与强大的处理能力。所有核心图像操作（裁剪、缩放、压缩）均在**本地浏览器**完成，确保您的隐私数据永不上传服务器。
 
